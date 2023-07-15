@@ -1,0 +1,21 @@
+{
+    "Adrenaline": {
+        "name": "Adrenaline",
+        "role": "survivor",
+        "description": "You are fuelled by unexpected energy when on the verge of escape. Instantly heal one <b>health state</b> and sprint at {0}% of your normal running speed for {1} seconds when the exit gates are powered. Adrenaline is on hold if you are disabled at the moment it should take effect and will activate when freed.<br><br><i>Adrenaline</i> will <b>wake you up</b> if you are asleep when it triggers.<br><br><i>Adrenaline</i> ignores the <b>Exhausted</b> status effect.<br><br>Causes the <b>Exhausted</b> status effect for {2} seconds.<br><br>Exhausted prevents Survivors from activating exhausting perks.",
+        "variable": [
+            [
+            "150"
+            ],
+            [
+            "5"
+            ],
+            [
+            "60",
+            "50",
+            "40"
+            ]
+        ],
+        "image": "img/IconPerks_adrenaline.webp"
+    }
+}
