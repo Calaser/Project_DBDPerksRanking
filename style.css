@@ -108,6 +108,7 @@ nav a:focus
 
 
 .main {
+    min-width: 360px;
     padding-top: 30px;
     background-color: var(--primary-color);
     min-height: calc(100vh - 237px);
@@ -140,14 +141,14 @@ nav a:focus
 
 #rankingSheet {
     width: 100%;
+    font-weight: bold;
 }
 
-#rankingSheet,
+#rankingSheet, 
 #rankingSheet caption,
-#rankingSheet th,
 #rankingSheet td {
-    border: 2px solid rgb(100, 52, 52);
     border-collapse: collapse;
+    border: 5px solid rgb(117, 41, 41);
     text-align: center;
 }
 
@@ -159,9 +160,25 @@ nav a:focus
     width:100px;
 }
 
-#rankingSheet .perkcell,
 td:last-child {
     align-items: start;
+}
+
+#rankingSheet img {
+    height: 70px;
+    margin: 0px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* border: #532121 3px solid; */
+}
+
+#star5,
+#star4,
+#star3,
+#star2,
+#star1 {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
