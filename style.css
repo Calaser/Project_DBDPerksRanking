@@ -152,6 +152,10 @@ nav a:focus
     text-align: center;
 }
 
+#rankingSheet caption{
+    border-bottom: none; /*for the unknown border between caption and element below */ 
+}
+
 #rankingSheet caption h2{
     margin: auto;
 }
@@ -180,13 +184,6 @@ td:last-child {
     display: flex;
     flex-wrap: wrap;
 }
-
-
-
-
-
-
-
 
 
 
