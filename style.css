@@ -90,6 +90,10 @@ nav a {
     padding-block: 10px 7px;
 }
 
+.unavailable:hover{
+    cursor: not-allowed; /*not available for now */
+}
+
 @media screen and (min-width :576px) {
     nav a {
         font-size: 1.5em;
