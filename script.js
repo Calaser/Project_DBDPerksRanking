@@ -34,9 +34,10 @@ function renderFunction(perksRankingData, perksInfoData) {
    keys.forEach(key => {
       if (perksInfoData[key].role === "survivor") {
          //create perk DOM
-         const createIcon = document.createElement("img");
+         const createIcon = document.createElement("div");
+         createIcon.className = "perksBtn";
          createIcon.id = perksInfoData[key].name;
-         createIcon.src = `img/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.indexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp`;
+         createIcon.style.backgroundImage = `url("img/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.indexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp")`;
 
          //place perk DOM to tier list
          for (let i = 0; i < 5; i++) {
@@ -63,7 +64,7 @@ function renderFunction(perksRankingData, perksInfoData) {
                <p>${(function fun() { //use IIFE for looping
                   desc = perksInfoData[key].description;
                   for (var j = 0; j < perksInfoData[key].tunables.length; j++) {
-                     desc = desc.replace(`{${j}}`, perksInfoData[key].tunables[j].slice(-1));
+                     desc = desc.replaceAll(`{${j}}`, perksInfoData[key].tunables[j].slice(-1));
                   }
                   return desc;
                })()}
@@ -73,7 +74,7 @@ function renderFunction(perksRankingData, perksInfoData) {
             <div id="perk_review">
                <h2>Review</h2>
                <p>
-                  ${perksReview[perksInfoData[key].name] || "No comment."}
+                  ${perksReview[perksInfoData[key].name] || "No comment available."}
                </p>
             </div>
 
@@ -94,3 +95,5 @@ function renderFunction(perksRankingData, perksInfoData) {
 }
 
 // 在終端使用 live-server 指令以開啟local host
+
+//video: https://www.youtube.com/watch?v=mJk6isUi9H0&t=7s

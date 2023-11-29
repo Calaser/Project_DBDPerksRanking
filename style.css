@@ -15,7 +15,7 @@
     --primary-color: #2D2835;
     --secondary-color: #4A4453;
     --third-color: #AFA8BA;
-    color:rgb(214, 100, 106)
+    color: rgb(214, 100, 106)
 }
 
 h1 {
@@ -38,7 +38,7 @@ h2 {
     text-align: center;
     font-size: 2em;
     padding: 10px 0;
-    margin:0 0 20px;
+    margin: 0 0 20px;
 }
 
 h3 {
@@ -61,7 +61,7 @@ header {
     border-bottom: 2px #532121 solid;
 }
 
-header h1{
+header h1 {
     text-align: center;
     color: rgb(158, 47, 47);
 }
@@ -90,8 +90,9 @@ nav a {
     padding-block: 10px 7px;
 }
 
-.unavailable:hover{
-    cursor: not-allowed; /*not available for now */
+.unavailable:hover {
+    cursor: not-allowed;
+    /*not available for now */
 }
 
 @media screen and (min-width :576px) {
@@ -102,8 +103,7 @@ nav a {
 
 
 nav a:hover,
-nav a:focus
-{
+nav a:focus {
     color: rgb(190, 25, 39);
 }
 
@@ -148,7 +148,7 @@ nav a:focus
     font-weight: bold;
 }
 
-#rankingSheet, 
+#rankingSheet,
 #rankingSheet caption,
 #rankingSheet td {
     border-collapse: collapse;
@@ -156,29 +156,53 @@ nav a:focus
     text-align: center;
 }
 
-#rankingSheet caption{
-    border-bottom: none; /*for the unknown border between caption and element below */ 
+#rankingSheet caption {
+    border-bottom: none;
+    /*for the unknown border between caption and element below */
 }
 
-#rankingSheet caption h2{
+#rankingSheet caption h2 {
     margin: auto;
 }
 
 #rankingSheet td:first-child {
-    width:100px;
+    width: 100px;
 }
 
 td:last-child {
     align-items: start;
 }
 
-#rankingSheet img {
+.perksBtn {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 70px;
     height: 70px;
     margin: 0px;
     cursor: pointer;
     border-radius: 50%;
     /* border: #532121 3px solid; */
 }
+
+.perksBtn::before {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    content: attr(id);
+    padding: 3px;
+    width: max-content;
+    display: none;
+    background-color:#521313;
+    border: 2px #360808 solid;
+    z-index: 1;
+}
+
+.perksBtn:hover::before {
+    display: block;
+}
+
 
 #star5,
 #star4,
@@ -216,7 +240,17 @@ td:last-child {
 
 #content {
     width: 95%;
+    max-height: 700px;
+    padding: 10px;
     margin: auto;
+    overflow: auto;
+}
+
+@media screen and (min-width :1200px) {
+    #content {
+        max-height: unset;
+        overflow: unset;
+    }
 }
 
 #content_background {
