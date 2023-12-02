@@ -21,28 +21,31 @@ fetch("perks_info.json")
    .then(json => perksInfoData = json)
    .then(json => {
       perksInfoData = json;
-
-      renderFunction(perksRankingData, perksInfoData);
+      document.getElementById("navBtn1").classList.add("highLight");
+      renderTierListFunction(perksRankingData, perksInfoData, "survivor");
    })
    .catch(error => {
       console.log("Perks Info Fetch / Render Error!", error);
    });
 
 
-function renderFunction(perksRankingData, perksInfoData) {
+function renderTierListFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
+   for (let i = 1; i <= 5; i++) {
+      document.getElementById(`star${i}`).innerHTML = "";
+   }
    keys.forEach(key => {
-      if (perksInfoData[key].role === "survivor") {
+      if (perksInfoData[key].role === role) {
          //create perk DOM
          const createIcon = document.createElement("div");
          createIcon.className = "perksBtn";
          createIcon.id = perksInfoData[key].name;
-         createIcon.style.backgroundImage = `url("img/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.indexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp")`;
+         createIcon.style.backgroundImage = `url("img/${role}/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.lastIndexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp")`;
 
          //place perk DOM to tier list
          for (let i = 0; i < 5; i++) {
-            for (let j = 0; j < perksRankingData[i].length; j++) {
-               if (perksRankingData[i][j] === perksInfoData[key].name) {
+            for (let j = 0; j < perksRankingData[role][i].length; j++) {
+               if (perksRankingData[role][i][j] === perksInfoData[key].name) {
                   createIcon.style.order = j;
                   document.getElementById(`star${5 - i}`).appendChild(createIcon);
                }
@@ -58,7 +61,7 @@ function renderFunction(perksRankingData, perksInfoData) {
             contentBackground.classList.add("show");
             content.innerHTML = `
             <div id="perk_info">
-               <img src="img/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.lastIndexOf("_") + 1, perksInfoData[key].image.lastIndexOf("."))}.webp"></img>
+               <img src="img/${role}/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.lastIndexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp"></img>
                <h2>${perksInfoData[key].name}</h2>
    
                <p>${(function fun() { //use IIFE for looping
@@ -94,6 +97,29 @@ function renderFunction(perksRankingData, perksInfoData) {
    })
 }
 
+document.getElementById("navBtn1").addEventListener("click", (e) => {
+   renderNavFunction(e);
+   renderTierListFunction(perksRankingData, perksInfoData, "survivor");
+})
+
+document.getElementById("navBtn2").addEventListener("click", (e) => {
+   renderNavFunction(e);
+   renderTierListFunction(perksRankingData, perksInfoData, "killer");
+})
+
+function renderNavFunction(e) {
+   Array.from(document.getElementsByClassName("navBtn")).forEach((btn) => {
+      btn.classList.remove("highLight")
+   });
+   e.target.classList.add("highLight");
+   document.getElementById("contentWrapper").classList.remove("show");
+   document.getElementById("content_background").classList.remove("show");
+}
+
 // 在終端使用 live-server 指令以開啟local host
 
-//video: https://www.youtube.com/watch?v=mJk6isUi9H0&t=7s
+// 7.1.0
+// survivor video: https://www.youtube.com/watch?v=mJk6isUi9H0&t
+// killer video: https://www.youtube.com/watch?v=q3YNmVPmIeY
+
+// perks info API: https://dbd.tricky.lol/apidocs/  Perks section

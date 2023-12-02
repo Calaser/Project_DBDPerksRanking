@@ -252,7 +252,7 @@
         ],
         "modifier": "BBQAndChilli",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Cannibal/iconPerks_BBQAndChili.png"
+        "image": "UI/Icons/Perks/Cannibal/iconPerks_barbecueAndChilli.png"
     },
     "BeastOfPrey": {
         "categories": [
@@ -465,7 +465,7 @@
         ],
         "modifier": "BoonDestroyer",
         "teachable": 0,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_BoonDestroyer.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_shatteredHope.png"
     },
     "BorrowedTime": {
         "categories": [
@@ -809,7 +809,7 @@
         "categories": [
             "obstruction"
         ],
-        "name": "Dead Man’s Switch",
+        "name": "Dead Man's Switch",
         "description": "When you hook a Survivor, <i>Dead Man’s Switch</i> activates for the next {0} seconds.<br><br>While activated, any Survivor that stops repairing a generator before it is fully repaired causes The Entity to block the generator until <i>Dead Man’s Switch's</i> effect ends.<br><br>Affected generators are highlighted by a white aura.",
         "role": "killer",
         "character": 268435474,
@@ -822,7 +822,7 @@
         ],
         "modifier": "DeadMansSwitch",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Ukraine/iconPerks_deadManSwitch.png"
+        "image": "UI/Icons/Perks/Ukraine/iconPerks_deadMansSwitch.png"
     },
     "Deathbound": {
         "categories": [
@@ -1053,7 +1053,7 @@
         "categories": [
             "hinderance"
         ],
-        "name": "Dragon’s Grip",
+        "name": "Dragon's Grip",
         "description": "After damaging a generator, for the next {0} seconds, the first Survivor that interacts with it will scream, revealing their location for {1} seconds, and becoming afflicted with the <b>Exposed</b> status effect for {2} seconds.<br><br><i>Dragon’s Grip</i> has a cooldown of {3} seconds.<br><br>Exposed Survivors will be downed by basic attacks even if uninjured.",
         "role": "killer",
         "character": 268435476,
@@ -1255,7 +1255,7 @@
         ],
         "modifier": "FranklinsDemise",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Cannibal/iconPerks_franklinsLoss.png"
+        "image": "UI/Icons/Perks/Cannibal/iconPerks_franklinsDemise.png"
     },
     "FurtiveChase": {
         "categories": [
@@ -1319,7 +1319,7 @@
         ],
         "modifier": "GeneratorOvercharge",
         "teachable": 40,
-        "image": "UI/Icons/Perks/DLC4/iconPerks_generatorOvercharge.png"
+        "image": "UI/Icons/Perks/DLC4/iconPerks_overcharge.png"
     },
     "HangmansTrick": {
         "categories": [
@@ -1447,7 +1447,7 @@
         ],
         "modifier": "Hex_DevourHope",
         "teachable": 40,
-        "image": "UI/Icons/Perks/DLC3/iconPerks_devourHope.png"
+        "image": "UI/Icons/Perks/DLC3/iconPerks_hexDevourHope.png"
     },
     "Hex_HauntedGround": {
         "categories": [
@@ -1466,7 +1466,7 @@
         ],
         "modifier": "Hex_HauntedGround",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Haiti/iconPerks_hauntedGround.png"
+        "image": "UI/Icons/Perks/Haiti/iconPerks_hexHauntedGround.png"
     },
     "Hex_HuntressLullaby": {
         "categories": [
@@ -1485,7 +1485,7 @@
         ],
         "modifier": "Hex_HuntressLullaby",
         "teachable": 40,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_HuntressLullaby.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_hexHuntressLullaby.png"
     },
     "Hex_Ruin": {
         "categories": [
@@ -1507,7 +1507,7 @@
         ],
         "modifier": "Hex_Ruin",
         "teachable": 35,
-        "image": "UI/Icons/Perks/DLC3/iconPerks_ruin.png"
+        "image": "UI/Icons/Perks/DLC3/iconPerks_hexRuin.png"
     },
     "Hex_The_Third_Seal": {
         "categories": [
@@ -1526,7 +1526,7 @@
         ],
         "modifier": "Hex_TheThirdSeal",
         "teachable": 30,
-        "image": "UI/Icons/Perks/DLC3/iconPerks_theThirdSeal.png"
+        "image": "UI/Icons/Perks/DLC3/iconPerks_hexTheThirdSeal.png"
     },
     "Hex_Thrill_Of_The_Hunt": {
         "categories": [
@@ -1548,7 +1548,7 @@
         ],
         "modifier": "Hex_ThrillOfTheHunt",
         "teachable": 0,
-        "image": "UI/Icons/Perks/DLC3/iconPerks_thrillOfTheHunt.png"
+        "image": "UI/Icons/Perks/DLC3/iconPerks_hexThrillOfTheHunt.png"
     },
     "Hope": {
         "categories": [
@@ -1658,7 +1658,7 @@
         "categories": [
             "trickery"
         ],
-        "name": "Knock Out",
+        "name": "Knockout",
         "description": "The trauma caused by your brutal attacks makes crying for help painfully difficult.<br><br><li>Survivors put into the dying state by your basic attacks are not revealed to other Survivors when they are standing outside of a {2}-meter range.</li><li>Survivors put into the dying state by your basic attacks crawl {1}% slower for {0} seconds, and their recovery speed is reduced by 25%.</li><li>During this time, Survivors are affected by the <b>Blindness</b> status effect.</li><br><br>Blindness prevents Survivors from seeing auras.",
         "role": "killer",
         "character": 268435464,
@@ -2041,7 +2041,7 @@
         ],
         "modifier": "BP_K26P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Ion/T_iconPerks_painResonance.png"
+        "image": "UI/Icons/Perks/Ion/T_iconPerks_scourgeHookPainResonance.png"
     },
     "K26P03": {
         "categories": null,
@@ -2093,7 +2093,7 @@
         ],
         "modifier": "BP_K27P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Kepler/iconPerks_floodOfRage.png"
+        "image": "UI/Icons/Perks/Kepler/iconPerks_scourgeHookFloodsOfRage.png"
     },
     "K27P02": {
         "categories": null,
@@ -2176,7 +2176,7 @@
         ],
         "modifier": "BP_K28P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_DarknessRevelated.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_DarknessRevealed.png"
     },
     "K28P03": {
         "categories": null,
@@ -2236,7 +2236,7 @@
         ],
         "modifier": "BP_K29P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Orion/iconPerks_AwakenedAwarenesss.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_AwakenedAwareness.png"
     },
     "K29P03": {
         "categories": null,
@@ -2389,11 +2389,11 @@
         "teachable": 40,
         "image": "UI/Icons/Perks/Saturn/iconPerks_Leverage.png"
     },
-    "K32P01": {
+    "Cruel Limits": {
         "categories": [
             "hinderance"
         ],
-        "name": "Genetic Limits",
+        "name": "Cruel Limits",
         "description": "Around you, the limits of human life become readily apparent.<br><br>When a Survivor finishes the healing action, they suffer the <b>Exhausted</b> status effect for {0} seconds.<br><br>Exhausted prevents Survivors from activating exhausting perks.",
         "role": "killer",
         "character": 268435487,
@@ -2406,7 +2406,7 @@
         ],
         "modifier": "BP_K32P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Umbra/IconPerks_GeneticLimits.png"
+        "image": "UI/Icons/Perks/Umbra/IconPerks_cruelLimits.png"
     },
     "K32P02": {
         "categories": [
@@ -2460,7 +2460,7 @@
         ],
         "modifier": "BP_K32P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Umbra/IconPerks_SelfAware.png"
+        "image": "UI/Icons/Perks/Umbra/IconPerks_machineLearning.png"
     },
     "Kindred": {
         "categories": [
@@ -2632,7 +2632,7 @@
         "categories": [
             "hinderance"
         ],
-        "name": "Make your Choice",
+        "name": "Make Your Choice",
         "description": "When a Survivor rescues another from a hook at least {0} meters away from you, <i>Make your Choice</i> causes the Survivor to scream and applies the <b><i>Exposed</i></b> status effect to them for {1} seconds.<br><br><i>Make your Choice</i> has a cooldown of {2} seconds.<br><br>Exposed Survivors will be downed by basic attacks even if uninjured.",
         "role": "killer",
         "character": 268435466,
@@ -2659,7 +2659,7 @@
         "categories": [
             "hinderance"
         ],
-        "name": "Fearmonger",
+        "name": "Mindbreaker",
         "description": "Your distressing presence drains and weakens your prey.<br><br>While repairing generators, Survivors are afflicted by the <b>Blindness</b> and <b>Exhausted</b> status effect.<br><br>Any existing <b>Exhausted</b> status effect timers are paused while the Survivor is repairing a generator. After ending the repair action, the Survivor is afflicted by the <b>Blindness</b> and <b>Exhausted</b> status effect for&nbsp;{1} seconds.<br><br>Blindness prevents Survivors from seeing auras.<br><br>Exhausted prevents Survivors from activating exhausting perks.",
         "role": "killer",
         "character": 268435472,
@@ -2720,7 +2720,7 @@
         ],
         "modifier": "MonstrousShrine",
         "teachable": 0,
-        "image": "UI/Icons/Perks/iconPerks_monstrousShrine.png"
+        "image": "UI/Icons/Perks/iconPerks_scourgeHookMonstrousShrine.png"
     },
     "Nemesis": {
         "categories": [
@@ -2788,7 +2788,7 @@
         ],
         "modifier": "BP_HexNoOneEscapesDeath",
         "teachable": 0,
-        "image": "UI/Icons/Perks/iconPerks_noOneEscapesDeath.png"
+        "image": "UI/Icons/Perks/iconPerks_hexNoOneEscapesDeath.png"
     },
     "No_One_Left_Behind": {
         "categories": [
@@ -2936,7 +2936,7 @@
         "categories": [
             "chasing"
         ],
-        "name": "Play With Your Food",
+        "name": "Play with Your Food",
         "description": "You become <b>obsessed</b> with one Survivor.<br><br>Every time you chase your Obsession and let them escape, you receive a token up to a maximum of {0} tokens.<br><br>Each token increases your movement speed by {1}%.<br><br>Performing a <i>basic attack</i> or <i>Special Attack</i> spends one token.<br><br>The Killer can only be <b>obsessed</b> with one Survivor at a time.",
         "role": "killer",
         "character": 268435461,
@@ -3118,7 +3118,7 @@
         ],
         "modifier": "BP_Rancor",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Haiti/iconPerks_hatred.png"
+        "image": "UI/Icons/Perks/Haiti/iconPerks_rancor.png"
     },
     "RedHerring": {
         "categories": [
@@ -4136,7 +4136,7 @@
         "categories": [
             "cruelty"
         ],
-        "name": "Save the best for last",
+        "name": "Save the Best for Last",
         "description": "You become <b>obsessed</b> with one Survivor.<br><br>Earn a token for each successful <i>basic attack</i> that is not dealt to the Obsession.<br><br>Each token grants a stackable {0}% decreased successful <i>basic attack</i> cooldown, you can earn up to {1} tokens.<br><br>Hitting your Obsession with a <i>basic attack</i> will cause you to lose {2} tokens.<br><br>You can no longer gain tokens if your Obsession is sacrificed or killed.<br><br>The Killer can only be <b>obsessed</b> with one Survivor at a time.",
         "role": "killer",
         "character": 268435461,
@@ -4520,7 +4520,7 @@
         "categories": [
             "obstruction"
         ],
-        "name": "Jolt",
+        "name": "Surge",
         "description": "Your eerie presence charges the air and interferes with technology.<br><br>Putting a Survivor into the dying state with a <i>basic attack</i> causes all generators within a 32-meter radius to explode instantly and begin regressing. Generators affected by <i>Jolt</i> immediately lose {0}% of their progress.",
         "role": "killer",
         "character": 268435472,
@@ -4647,7 +4647,7 @@
         ],
         "modifier": "BP_Thanatophobia",
         "teachable": 35,
-        "image": "UI/Icons/Perks/iconPerks_thatanophobia.png"
+        "image": "UI/Icons/Perks/iconPerks_thanatophobia.png"
     },
     "TheMettleOfMan": {
         "categories": [
@@ -4743,19 +4743,16 @@
             "trickery"
         ],
         "name": "Trail of Torment",
-        "description": "You guide your victims along a path of pain and punishment.<br><br>After damaging a generator, you become <b>Undetectable</b> until the generator stops regressing or a Survivor is injured or put into the dying state by any means.&nbsp;During this time, the generator’s yellow aura is revealed to Survivors.<br><br>This effect can only trigger once every {2}&nbsp;seconds.<br><br>Undetectable hides the Killer's aura, Terror Radius, and Red Stain.",
+        "description": "You guide your victims along a path of pain and punishment.<br><br>After damaging a generator, you become <b>Undetectable</b> until the generator stops regressing or a Survivor is injured or put into the dying state by any means.&nbsp;During this time, the generator’s yellow aura is revealed to Survivors.<br><br>This effect can only trigger once every {0} seconds.<br><br>Undetectable hides the Killer's aura, Terror Radius, and Red Stain.",
         "role": "killer",
         "character": 268435475,
-        "tunables": {
-            "0": [
-                "16"
-            ],
-            "2": [
+        "tunables": [
+            [
                 "80",
                 "70",
                 "60"
             ]
-        },
+        ],
         "modifier": "TrailofTorment",
         "teachable": 35,
         "image": "UI/Icons/Perks/Wales/iconPerks_trailOfTorment.png"

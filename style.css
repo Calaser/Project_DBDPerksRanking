@@ -1,7 +1,7 @@
 /*
-   primary color:    #2D2835
-   secondary color:  #4A4453
-   third color:      #AFA8BA
+    primary color:    #2D2835
+    secondary color:  #4A4453
+    third color:      #AFA8BA
 */
 
 
@@ -71,11 +71,13 @@ nav ul {
     display: flex;
     padding: 0;
     margin: 0;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 nav li {
-    min-width: 170px;
-    flex-grow: 1;
+    /* min-width: 170px; */
+    margin-inline: auto;
 }
 
 nav a {
@@ -86,8 +88,18 @@ nav a {
     font-size: 1.25em;
     font-weight: 700;
     color: rgb(139, 43, 43);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05em;
+    width: fit-content;
     padding-block: 10px 7px;
+}
+
+nav a.highLight {
+    color: rgb(190, 25, 39);
+}
+
+nav a:hover,
+nav a:focus {
+    color: rgb(190, 25, 39);
 }
 
 .unavailable:hover {
@@ -102,12 +114,6 @@ nav a {
 }
 
 
-nav a:hover,
-nav a:focus {
-    color: rgb(190, 25, 39);
-}
-
-
 
 
 
@@ -118,6 +124,7 @@ nav a:focus {
     min-height: calc(100vh - 237px);
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 @media screen and (min-width :1200px) {
@@ -133,7 +140,7 @@ nav a:focus {
 /* ranking sheet*/
 
 #rankingSheetWrapper {
-    margin-inline: auto;
+    margin: 0 auto 20px;
     width: 90%;
 }
 
@@ -194,7 +201,7 @@ td:last-child {
     padding: 3px;
     width: max-content;
     display: none;
-    background-color:#521313;
+    background-color: #521313;
     border: 2px #360808 solid;
     z-index: 1;
 }
@@ -285,11 +292,16 @@ td:last-child {
     text-align: center;
     padding-bottom: 30px;
     border-bottom: 3px solid rgb(116, 33, 33);
+    list-style-position: outside;
 }
 
-#perk_info img {
+#perk_info>img {
     height: 70px;
     margin: -20px;
+}
+
+#perk_info>li {
+    text-align: start;
 }
 
 @media screen and (min-width :576px) {
@@ -313,11 +325,12 @@ td:last-child {
 
     #main #contentWrapper {
         position: relative;
-        top: auto;
-        left: auto;
+        top: 0;
+        left: 0;
         width: 60%;
         max-width: 700px;
-        margin: 0 auto 0 20px;
+        height: fit-content;
+        margin: 0 auto;
         border: 5px var(--secondary-color) solid;
         padding: 20px;
     }
