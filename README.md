@@ -7,7 +7,32 @@
 可透過標頭的導航列在不同主題的排行榜之間切換。
 
 每個排行榜主要由一個技能的主觀強度列表以及一個介紹技能的區塊組成，<br />
-透過點擊強度排行榜上的任意技能圖案可以開啟相關的技能介紹。
+透過點擊排行榜上的任意技能圖案可以開啟相關技能的說明及評價文本。
+
+## 網站內容
+目前有以下排行榜資料：<br />
+7.1.0 倖存者技能強度榜<br />
+7.1.0 殺手技能強度榜<br />
+
+以上榜單包含7.1.0全部的技能說明文本，<br />
+但評價部分目前只更新了4~5星的倖存者技能。
+
+## 相關元素
++ HTML
+  - Nav
+  - Table
+  - Semantic HTML
++ CSS
+  - Custom Properties (color picking)
+  - RWD
+    * Media Quary
+    * Modal (change layout for small screen)
+  - Pseudo Element (tooltips)
++ Javascript
+  - Async request (fetch and callback function chaining)
+  - JSON data process and object iterate
+  - DOM manipulate according to data
+  - Render function (centralized process)
 
 ## 資料來源
 強度列表主要來源為Dead by Daylight英文社群知名內容創作者Otzdarva的技能排名影片：<br />
