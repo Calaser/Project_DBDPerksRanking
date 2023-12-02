@@ -1,32 +1,58 @@
 let perksReview;
-fetch("perks_review.json")
-   .then(res => res.json())
-   .then(json => perksReview = json)
-   .catch(error => {
-      console.log("Perks Review Fetch Error!", error);
-   })
-
-
 let perksRankingData;
-fetch("perks_ranking.json")
-   .then(res => res.json())
-   .then(json => perksRankingData = json)
-   .catch(error => {
-      console.log("Perks Ranking Fetch Error!", error);
-   })
-
 let perksInfoData;
-fetch("perks_info.json")
-   .then(res => res.json())
-   .then(json => perksInfoData = json)
-   .then(json => {
-      perksInfoData = json;
+
+let fetchArray = [fetch("perkss_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json")];
+Promise.all(fetchArray) 
+   .then(responses => Promise.all(responses.map(response => {
+      if (response.ok)
+         return response.json();
+      else
+         throw new Error(`fetch ${response.url} fail!`);
+   })))
+   .then(dataArray => {
+      perksReview = dataArray[0];
+      perksRankingData = dataArray[1];
+      perksInfoData = dataArray[2];
       document.getElementById("navBtn1").classList.add("highLight");
       renderTierListFunction(perksRankingData, perksInfoData, "survivor");
    })
-   .catch(error => {
-      console.log("Perks Info Fetch / Render Error!", error);
-   });
+   .catch(error => console.log(error));
+
+// fetchArray = promise array
+// responses = response array
+// response = response
+// response.json() = promise
+
+
+// old fetch method below (sometime execute render function before fetch first two data)
+
+// fetch("perks_review.json")
+//    .then(res => res.json())
+//    .then(json => perksReview = json)
+//    .catch(error => {
+//       console.log("Perks Review Fetch Error!", error);
+//    })
+
+
+// fetch("perks_ranking.json")
+//    .then(res => res.json())
+//    .then(json => perksRankingData = json)
+//    .catch(error => {
+//       console.log("Perks Ranking Fetch Error!", error);
+//    })
+
+// fetch("perks_info.json")
+//    .then(res => res.json())
+//    .then(json => perksInfoData = json)
+//    .then(json => {
+//       perksInfoData = json;
+//       document.getElementById("navBtn1").classList.add("highLight");
+//       renderTierListFunction(perksRankingData, perksInfoData, "survivor");
+//    })
+//    .catch(error => {
+//       console.log("Perks Info Fetch / Render Error!", error);
+//    });
 
 
 function renderTierListFunction(perksRankingData, perksInfoData, role) {

@@ -271,7 +271,7 @@
         ],
         "modifier": "BeastOfPrey",
         "teachable": 30,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_BeastOfPrey.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_beastOfPrey.png"
     },
     "SituationalAwareness": {
         "categories": [
@@ -803,7 +803,7 @@
         ],
         "modifier": "BP_DeadHard",
         "teachable": 35,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_DeadHard.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_deadHard.png"
     },
     "DeadMansSwitch": {
         "categories": [
@@ -1766,7 +1766,7 @@
         ],
         "modifier": "BP_Hoarder",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Aurora/iconPerks_Hoarder.png"
+        "image": "UI/Icons/Perks/Aurora/iconPerks_hoarder.png"
     },
     "K22P02": {
         "categories": [
@@ -1788,7 +1788,7 @@
         ],
         "modifier": "BP_Oppression",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Aurora/iconPerks_Oppression.png"
+        "image": "UI/Icons/Perks/Aurora/iconPerks_oppression.png"
     },
     "K22P03": {
         "categories": [
@@ -1829,7 +1829,7 @@
         ],
         "modifier": "BP_Starstruck",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Comet/iconPerks_Starstruck.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_starstruck.png"
     },
     "K23P02": {
         "categories": [
@@ -1848,7 +1848,7 @@
         ],
         "modifier": "BP_HexCrowdControl",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Comet/iconPerks_HexCrowdControl.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_hexCrowdControl.png"
     },
     "K23P03": {
         "categories": [
@@ -1870,7 +1870,7 @@
         ],
         "modifier": "BP_NoWayOut",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Comet/iconPerks_NoWayOut.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_noWayOut.png"
     },
     "K24P01": {
         "categories": [
@@ -1958,7 +1958,7 @@
         ],
         "modifier": "BP_K25P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Gemini/iconPerks_Deadlock.png"
+        "image": "UI/Icons/Perks/Gemini/iconPerks_deadlock.png"
     },
     "K25P02": {
         "categories": null,
@@ -1978,7 +1978,7 @@
         ],
         "modifier": "BP_K25P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Gemini/iconPerks_HexPlaything.png"
+        "image": "UI/Icons/Perks/Gemini/iconPerks_hexPlaything.png"
     },
     "K25P03": {
         "categories": null,
@@ -1998,7 +1998,7 @@
         ],
         "modifier": "BP_K25P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Gemini/iconPerks_ScourgeHookGiftOfPain.png"
+        "image": "UI/Icons/Perks/Gemini/iconPerks_scourgeHookGiftOfPain.png"
     },
     "K26P01": {
         "categories": null,
@@ -2153,7 +2153,7 @@
         ],
         "modifier": "BP_K28P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_Dissolution.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_dissolution.png"
     },
     "K28P02": {
         "categories": null,
@@ -2176,7 +2176,7 @@
         ],
         "modifier": "BP_K28P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_DarknessRevealed.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_darknessRevealed.png"
     },
     "K28P03": {
         "categories": null,
@@ -2193,7 +2193,7 @@
         ],
         "modifier": "BP_K28P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_SepticTouch.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_septicTouch.png"
     },
     "K29P01": {
         "categories": null,
@@ -2216,7 +2216,7 @@
         ],
         "modifier": "BP_K29P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Orion/iconPerks_SuperiorAnatomy.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_superiorAnatomy.png"
     },
     "K29P02": {
         "categories": null,
@@ -2236,7 +2236,7 @@
         ],
         "modifier": "BP_K29P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Orion/iconPerks_AwakenedAwareness.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_awakenedAwareness.png"
     },
     "K29P03": {
         "categories": null,
@@ -2253,7 +2253,7 @@
         ],
         "modifier": "BP_K29P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Orion/iconPerks_Terminus.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_terminus.png"
     },
     "K30P01": {
         "categories": null,
@@ -2273,7 +2273,7 @@
         ],
         "modifier": "BP_K30P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Quantum/iconPerks_NowhereToHide.png"
+        "image": "UI/Icons/Perks/Quantum/iconPerks_nowhereToHide.png"
     },
     "K30P02": {
         "categories": null,
@@ -2293,7 +2293,7 @@
         ],
         "modifier": "BP_K30P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Quantum/iconPerks_HexFaceTheDarkness.png"
+        "image": "UI/Icons/Perks/Quantum/iconPerks_hexFaceTheDarkness.png"
     },
     "K30P03": {
         "categories": null,
@@ -2313,7 +2313,7 @@
         ],
         "modifier": "BP_K30P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Quantum/iconPerks_Hubris.png"
+        "image": "UI/Icons/Perks/Quantum/iconPerks_hubris.png"
     },
     "K31P01": {
         "categories": [
@@ -2336,7 +2336,7 @@
         ],
         "modifier": "BP_K31P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_GameAfoot.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_gameAfoot.png"
     },
     "K31P02": {
         "categories": [
@@ -2359,7 +2359,7 @@
         ],
         "modifier": "BP_K31P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_Thwack.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_thwack.png"
     },
     "K31P03": {
         "categories": [
@@ -2387,7 +2387,7 @@
         ],
         "modifier": "BP_K31P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_Leverage.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_leverage.png"
     },
     "Cruel Limits": {
         "categories": [
@@ -2434,7 +2434,7 @@
         ],
         "modifier": "BP_K32P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Umbra/IconPerks_ForcedHesitation.png"
+        "image": "UI/Icons/Perks/Umbra/IconPerks_forcedHesitation.png"
     },
     "K32P03": {
         "categories": [
@@ -2768,7 +2768,7 @@
         ],
         "modifier": "NoMither",
         "teachable": 40,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_NoMither.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_noMither.png"
     },
     "No_One_Escapes_Death": {
         "categories": [
@@ -3290,7 +3290,7 @@
         ],
         "modifier": "BP_FastTrack",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Comet/iconPerks_FastTrack.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_fastTrack.png"
     },
     "S25P02": {
         "categories": [
@@ -3315,7 +3315,7 @@
         ],
         "modifier": "BP_SmashHit",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Comet/iconPerks_SmashHit.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_smashHit.png"
     },
     "S25P03": {
         "categories": [
@@ -3337,7 +3337,7 @@
         ],
         "modifier": "BP_SelfPreservation",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Comet/iconPerks_Self-Preservation.png"
+        "image": "UI/Icons/Perks/Comet/iconPerks_self-Preservation.png"
     },
     "S26P01": {
         "categories": [
@@ -3359,7 +3359,7 @@
         ],
         "modifier": "BP_Counterforce",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_Counterforce.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_counterforce.png"
     },
     "S26P02": {
         "categories": [
@@ -3378,7 +3378,7 @@
         ],
         "modifier": "BP_Resurgence",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_Resurgence.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_resurgence.png"
     },
     "S26P03": {
         "categories": [
@@ -3403,7 +3403,7 @@
         ],
         "modifier": "BP_BlastMine",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_BlastMine.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_blastMine.png"
     },
     "S27P01": {
         "categories": [
@@ -3422,7 +3422,7 @@
         ],
         "modifier": "BP_BiteTheBullet",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_BiteTheBullet.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_biteTheBullet.png"
     },
     "S27P02": {
         "categories": [
@@ -3441,7 +3441,7 @@
         ],
         "modifier": "BP_Flashbang",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_Flashbang.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_flashbang.png"
     },
     "S27P03": {
         "categories": [
@@ -3460,7 +3460,7 @@
         ],
         "modifier": "BP_RookieSpirit",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Eclipse/iconPerks_RookieSpirit.png"
+        "image": "UI/Icons/Perks/Eclipse/iconPerks_rookieSpirit.png"
     },
     "S28P01": {
         "categories": null,
@@ -3480,7 +3480,7 @@
         ],
         "modifier": "BP_S28P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Hubble/iconPerks_Clairvoyance.png"
+        "image": "UI/Icons/Perks/Hubble/iconPerks_clairvoyance.png"
     },
     "S28P02": {
         "categories": null,
@@ -3500,7 +3500,7 @@
         ],
         "modifier": "BP_S28P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Hubble/iconPerks_BoonCircleOfHealing.png"
+        "image": "UI/Icons/Perks/Hubble/iconPerks_boonCircleOfHealing.png"
     },
     "S28P03": {
         "categories": null,
@@ -3520,7 +3520,7 @@
         ],
         "modifier": "BP_S28P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Hubble/iconPerks_BoonShadowStep.png"
+        "image": "UI/Icons/Perks/Hubble/iconPerks_boonShadowStep.png"
     },
     "S29P01": {
         "categories": null,
@@ -3540,7 +3540,7 @@
         ],
         "modifier": "BP_Overcome",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Ion/iconPerks_Overcome.png"
+        "image": "UI/Icons/Perks/Ion/iconPerks_overcome.png"
     },
     "S29P02": {
         "categories": null,
@@ -3640,7 +3640,7 @@
         ],
         "modifier": "BP_S30P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Kepler/iconPerks_BoonDarkTheory.png"
+        "image": "UI/Icons/Perks/Kepler/iconPerks_boonDarkTheory.png"
     },
     "S31P01": {
         "categories": null,
@@ -3663,7 +3663,7 @@
         ],
         "modifier": "BP_S31P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_InnerFocus.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_innerFocus.png"
     },
     "S31P02": {
         "categories": null,
@@ -3680,7 +3680,7 @@
         ],
         "modifier": "BP_S31P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_ResidualManifest.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_residualManifest.png"
     },
     "S31P03": {
         "categories": null,
@@ -3697,7 +3697,7 @@
         ],
         "modifier": "BP_S31P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Meteor/iconPerks_Overzealous.png"
+        "image": "UI/Icons/Perks/Meteor/iconPerks_overzealous.png"
     },
     "S32P01": {
         "categories": null,
@@ -3723,7 +3723,7 @@
         ],
         "modifier": "BP_S32P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Orion/iconPerks_Wiretap.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_wiretap.png"
     },
     "S32P02": {
         "categories": null,
@@ -3743,7 +3743,7 @@
         ],
         "modifier": "BP_S32P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Orion/iconPerks_ReactiveHealing.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_reactiveHealing.png"
     },
     "S32P03": {
         "categories": null,
@@ -3760,7 +3760,7 @@
         ],
         "modifier": "BP_S32P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Orion/iconPerks_LowProfile.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_lowProfile.png"
     },
     "S33P01": {
         "categories": null,
@@ -3777,7 +3777,7 @@
         ],
         "modifier": "BP_S33P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Orion/iconPerks_BetterThanNew.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_betterThanNew.png"
     },
     "S33P02": {
         "categories": null,
@@ -3800,7 +3800,7 @@
         ],
         "modifier": "BP_S33P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Orion/iconPerks_Reassurance.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_reassurance.png"
     },
     "S33P03": {
         "categories": null,
@@ -3829,7 +3829,7 @@
         ],
         "modifier": "BP_S33P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Orion/iconPerks_Hyperfocus.png"
+        "image": "UI/Icons/Perks/Orion/iconPerks_hyperfocus.png"
     },
     "S34P01": {
         "categories": null,
@@ -3855,7 +3855,7 @@
         ],
         "modifier": "BP_S34P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Quantum/iconPerks_PotentialEnergy.png"
+        "image": "UI/Icons/Perks/Quantum/iconPerks_potentialEnergy.png"
     },
     "S34P02": {
         "categories": null,
@@ -3872,7 +3872,7 @@
         ],
         "modifier": "BP_S34P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Quantum/iconPerks_Fogwise.png"
+        "image": "UI/Icons/Perks/Quantum/iconPerks_fogwise.png"
     },
     "Quick Gambit": {
         "categories": null,
@@ -3914,7 +3914,7 @@
         ],
         "modifier": "BP_S35P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_CutLoose.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_cutLoose.png"
     },
     "S35P02": {
         "categories": [
@@ -3936,7 +3936,7 @@
         ],
         "modifier": "BP_S35P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_FriendlyCompetition.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_friendlyCompetition.png"
     },
     "S35P03": {
         "categories": [
@@ -3961,7 +3961,7 @@
         ],
         "modifier": "BP_S35P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_TeamworkPowerOfTwo.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_teamworkPowerOfTwo.png"
     },
     "S36P01": {
         "categories": [
@@ -3989,7 +3989,7 @@
         ],
         "modifier": "BP_S36P01",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_BackgroundPlayer.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_backgroundPlayer.png"
     },
     "S36P02": {
         "categories": [
@@ -4013,7 +4013,7 @@
         ],
         "modifier": "BP_S36P02",
         "teachable": 35,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_BloodRush.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_bloodRush.png"
     },
     "S36P03": {
         "categories": [
@@ -4035,7 +4035,7 @@
         ],
         "modifier": "BP_S36P03",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Saturn/iconPerks_TeamworkCollectiveStealth.png"
+        "image": "UI/Icons/Perks/Saturn/iconPerks_teamworkCollectiveStealth.png"
     },
     "S37P01": {
         "categories": [
@@ -4623,7 +4623,7 @@
         ],
         "modifier": "TerritorialImperative",
         "teachable": 35,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_TerritorialImperative.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_territorialImperative.png"
     },
     "Thanatophobia": {
         "categories": [
@@ -4948,7 +4948,7 @@
         ],
         "modifier": "WereGonnaLiveForever",
         "teachable": 30,
-        "image": "UI/Icons/Perks/DLC5/iconPerks_WereGonnaLiveForever.png"
+        "image": "UI/Icons/Perks/DLC5/iconPerks_wereGonnaLiveForever.png"
     },
     "Whispers": {
         "categories": [
