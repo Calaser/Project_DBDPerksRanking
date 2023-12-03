@@ -2,7 +2,7 @@ let perksReview;
 let perksRankingData;
 let perksInfoData;
 
-let fetchArray = [fetch("perkss_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json")];
+let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json")];
 Promise.all(fetchArray) 
    .then(responses => Promise.all(responses.map(response => {
       if (response.ok)
