@@ -1300,7 +1300,7 @@
         ],
         "modifier": "Gearhead",
         "teachable": 30,
-        "image": "UI/Icons/Perks/Ukraine/iconPerks_gearHead.png"
+        "image": "UI/Icons/Perks/Ukraine/iconPerks_gearhead.png"
     },
     "GeneratorOvercharge": {
         "categories": [
@@ -1807,7 +1807,7 @@
         ],
         "modifier": "BP_CoupDeGrace",
         "teachable": 40,
-        "image": "UI/Icons/Perks/Aurora/iconPerks_coupDeGrace.png"
+        "image": "UI/Icons/Perks/Aurora/iconPerks_coupdeGrace.png"
     },
     "K23P01": {
         "categories": [
@@ -2675,7 +2675,7 @@
         ],
         "modifier": "BP_Mindbreaker",
         "teachable": 0,
-        "image": "UI/Icons/Perks/Qatar/iconPerks_mindBreaker.png"
+        "image": "UI/Icons/Perks/Qatar/iconPerks_mindbreaker.png"
     },
     "MonitorAndAbuse": {
         "categories": [
