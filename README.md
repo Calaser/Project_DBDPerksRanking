@@ -1,6 +1,8 @@
 # Project_DBDPerksRanking
 一個關於Dead by Deadlight這個遊戲中的技能排行與評價。
 
+[**>> 點此前往網站 <<**](https://calaser.github.io/Project_DBDPerksRanking/)
+
 <img src="https://i.imgur.com/e2oCLip.png">
 
 ## 網站功能
