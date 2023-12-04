@@ -3,7 +3,7 @@ let perksRankingData;
 let perksInfoData;
 
 let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json")];
-Promise.all(fetchArray) 
+Promise.all(fetchArray)
    .then(responses => Promise.all(responses.map(response => {
       if (response.ok)
          return response.json();
@@ -57,6 +57,10 @@ Promise.all(fetchArray)
 
 function renderTierListFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
+   //change title
+   document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating Ver 7.1.0`;
+   
+   //clean tier list
    for (let i = 1; i <= 5; i++) {
       document.getElementById(`star${i}`).innerHTML = "";
    }

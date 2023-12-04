@@ -173,6 +173,11 @@ main {
 
 #rankingSheet caption h2 {
     margin: auto;
+    text-transform: capitalize;
+}
+
+#rankingSheet thead td {
+    text-transform: capitalize;
 }
 
 #rankingSheet td:first-child {
