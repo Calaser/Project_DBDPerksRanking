@@ -16,8 +16,8 @@
 7.1.0 倖存者技能強度榜<br />
 7.1.0 殺手技能強度榜<br />
 
-以上榜單包含7.1.0全部的技能說明文本，<br />
-但評價部分目前只更新了4~5星的倖存者技能。
+以上榜單包含7.1.0全部的技能說明文本(英文)，<br />
+評價部分目前已經完成倖存者的部分。
 
 ## 相關元素
 + HTML
@@ -41,8 +41,7 @@
 https://www.youtube.com/watch?v=mJk6isUi9H0&t (Survivor)<br />
 https://www.youtube.com/watch?v=q3YNmVPmIeY (Killer)
 
-技能評價則是由個人整理影片中Otzdarva的評價加上少許自己的理解後產生。<br />
-*為了避免影響原影片流量，並沒有打算將評價翻成其他語言。
+技能評價則是由個人整理影片中Otzdarva的評價加上自己的理解後修改產生。<br />
 
 技能文本來源 API：<br />
 https://dbd.tricky.lol/api/perks<br />
