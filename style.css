@@ -200,6 +200,11 @@ td:last-child {
     border-radius: 50%;
 }
 
+.perksBtn.selected {
+    outline: 3px solid firebrick;
+    outline-offset: -5px;
+}
+
 .perksBtn::before {
     position: absolute;
     top: 50px;

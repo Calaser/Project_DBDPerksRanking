@@ -59,7 +59,7 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
    //change title
    document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating Ver 7.1.0`;
-   
+
    //clean tier list
    for (let i = 1; i <= 5; i++) {
       document.getElementById(`star${i}`).innerHTML = "";
@@ -86,7 +86,10 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
          const content = document.getElementById("content");
          const contentWrapper = document.getElementById("contentWrapper");
          const contentBackground = document.getElementById("content_background");
-         createIcon.addEventListener('click', () => {
+         createIcon.addEventListener('click', (e) => {
+            if (document.getElementsByClassName("selected")[0])
+               document.getElementsByClassName("selected")[0].classList.remove("selected");
+            e.target.classList.add("selected");
             contentWrapper.classList.add("show");
             contentBackground.classList.add("show");
             content.innerHTML = `
@@ -103,11 +106,11 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
                })()}
                </p>
             </div>
-
+            
             <div id="perk_review">
                <h2>Review</h2>
                <p>
-                  ${perksReview[perksInfoData[key].name] || "No comment available."}
+                  ${perksReview[role][perksInfoData[key].name] || "No comment available."}
                </p>
             </div>
 
