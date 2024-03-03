@@ -67,17 +67,20 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
    keys.forEach(key => {
       if (perksInfoData[key].role === role) {
          //create perk DOM
+         const createBtn = document.createElement("div");
+         createBtn.className = "perksBtn";
+         createBtn.id = perksInfoData[key].name;
          const createIcon = document.createElement("div");
-         createIcon.className = "perksBtn";
-         createIcon.id = perksInfoData[key].name;
+         createIcon.className = "perksIcon";
          createIcon.style.backgroundImage = `url("img/${role}/IconPerks_${perksInfoData[key].image.slice(perksInfoData[key].image.lastIndexOf("_") + 1, perksInfoData[key].image.indexOf("."))}.webp")`;
+         createBtn.appendChild(createIcon);
 
          //place perk DOM to tier list
          for (let i = 0; i < 5; i++) {
             for (let j = 0; j < perksRankingData[role][i].length; j++) {
                if (perksRankingData[role][i][j] === perksInfoData[key].name) {
-                  createIcon.style.order = j;
-                  document.getElementById(`star${5 - i}`).appendChild(createIcon);
+                  createBtn.style.order = j;
+                  document.getElementById(`star${5 - i}`).appendChild(createBtn);
                }
             }
          }
@@ -86,7 +89,7 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
          const content = document.getElementById("content");
          const contentWrapper = document.getElementById("contentWrapper");
          const contentBackground = document.getElementById("content_background");
-         createIcon.addEventListener('click', (e) => {
+         createBtn.addEventListener('click', (e) => {
             if (document.getElementsByClassName("selected")[0])
                document.getElementsByClassName("selected")[0].classList.remove("selected");
             e.target.classList.add("selected");

@@ -1,19 +1,12 @@
-/*
-    primary color:    #2D2835
-    secondary color:  #4A4453
-    third color:      #AFA8BA
-*/
-
-
 * {
     box-sizing: border-box;
     font-family: 'Work Sans', 'Open Sans', sans-serif;
 }
 
 :root {
-    --primary-color: #2D2835;
-    --secondary-color: #4A4453;
-    --third-color: #AFA8BA;
+    --primary-color: #352631;
+    --secondary-color: #523f4e;
+    --third-color: #bda3b1;
 
     --h1-color: #a71717;
     --nav-color: #881a1a;
@@ -22,8 +15,8 @@
 
     --border-color: #6d0f0f;
 
-
     color: var(--font-color);
+
 }
 
 h1 {
@@ -49,14 +42,6 @@ h2 {
     margin: 0 0 20px;
 }
 
-h3 {
-    display: inline-block;
-    padding: 0 3px;
-    border-bottom: 2px var(--border-color) solid;
-    margin: 0;
-    font-size: 1.3em;
-}
-
 p {
     font-size: 1.1em;
     line-height: 1.35em;
@@ -64,7 +49,7 @@ p {
 
 header {
     padding: 10px;
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--primary-color));
+    background-image: linear-gradient(to right, var(--primary-color) 0%, var(--secondary-color) 30%, var(--secondary-color) 70%, var(--primary-color) 100%);
     border-bottom: 2px var(--border-color) solid;
 }
 
@@ -83,7 +68,6 @@ nav ul {
 }
 
 nav li {
-    /* min-width: 170px; */
     margin-inline: auto;
 }
 
@@ -127,15 +111,7 @@ main {
     min-height: calc(100vh - 237px);
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-
-@media screen and (min-width :1200px) {
-    main {
-        flex-direction: row;
-    }
-}
-
 
 
 
@@ -144,18 +120,51 @@ main {
 
 #rankingSheetWrapper {
     margin: 0 auto 20px;
-    width: 90%;
+    width: clamp(360px, 90%, 800px);
 }
 
 @media screen and (min-width :1200px) {
     #rankingSheetWrapper {
-        width: 45%;
+        width: clamp(360px, 45%, 800px);
     }
+}
+
+#rankingSheetFilter {
+    margin-block: 10px;
+}
+
+#rankingSheetFilterTitle {
+    font-size: 1.5em;
+    padding: 10px 0;
+    margin: 0;
+}
+
+#rankingSheetFilter>button {
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    padding: 3px 7px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--font-color);
+    background: transparent;
+    cursor: pointer;
+}
+
+#rankingSheetFilter>button:hover {
+    filter: brightness(1.5);
 }
 
 #rankingSheet {
     width: 100%;
     font-weight: bold;
+    --icon-size: 60px;
+
+}
+
+@media screen and (min-width :576px) {
+    #rankingSheet {
+        --icon-size: 70px;
+    }
 }
 
 #rankingSheet,
@@ -188,13 +197,21 @@ td:last-child {
     align-items: start;
 }
 
+#star5,
+#star4,
+#star3,
+#star2,
+#star1 {
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--icon-size));
+    justify-content: space-between;
+}
+
 .perksBtn {
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 70px;
-    height: 70px;
+    width: var(--icon-size);
+    height: var(--icon-size);
     margin: 0px;
     cursor: pointer;
     border-radius: 50%;
@@ -222,18 +239,19 @@ td:last-child {
     display: block;
 }
 
-
-#star5,
-#star4,
-#star3,
-#star2,
-#star1 {
-    display: flex;
-    flex-wrap: wrap;
+.perksIcon {
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
 }
 
-
-
+/* .perksBtn:not(.filterPerks)>.perksIcon {
+    filter: opacity(0.3);
+} */
 
 
 
@@ -252,7 +270,6 @@ td:last-child {
     padding: 20px;
 }
 
-
 #contentWrapper.show {
     display: block;
 }
@@ -263,13 +280,6 @@ td:last-child {
     padding: 10px;
     margin: auto;
     overflow: auto;
-}
-
-@media screen and (min-width :1200px) {
-    #content {
-        max-height: unset;
-        overflow: unset;
-    }
 }
 
 #content_background {
@@ -317,7 +327,7 @@ td:last-child {
 }
 
 @media screen and (min-width :576px) {
-    header #wrapper {
+    #wrapper {
         width: 90%;
         max-width: 900px;
         margin: 0 auto;
@@ -329,22 +339,38 @@ td:last-child {
 }
 
 @media screen and (min-width :1200px) {
-    header #wrapper {
+    main {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #wrapper {
         width: 80%;
         max-width: 900px;
         margin: 0 auto;
     }
 
-    main #contentWrapper {
+    #rankingSheetWrapper {
+        z-index: 3;
+        margin-inline: 10px;
+    }
+
+    #contentWrapper {
         position: relative;
         top: 0;
         left: 0;
-        width: 60%;
+        margin-inline: 10px;
+        width: 55%;
         max-width: 700px;
         height: fit-content;
-        margin: 0 auto;
-        border: 5px var(--secondary-color) solid;
         padding: 20px;
+        display: block;
+    }
+
+
+    #content {
+        max-height: unset;
+        overflow: unset;
     }
 
     #content_closeBtn {
