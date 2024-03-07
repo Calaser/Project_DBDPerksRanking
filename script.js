@@ -152,6 +152,65 @@ function renderNavFunction(e) {
    document.getElementById("content_background").classList.remove("show");
 }
 
+document.getElementById("navBtn1").addEventListener("click", (e) => {
+   renderNavFunction(e);
+   renderTierListFunction(perksRankingData, perksInfoData, "survivor");
+})
+
+
+
+// filter data
+const perksProperty = {
+   "heal": ["Adrenaline", "For the People", "Resilience", "We'll make it", "Renewal", "Botany Knowledge"],
+   "repair": ["Prove Thyself", "Resilience", "Deja Vu"]
+}
+
+// filter var init
+let filterTag = {};
+Object.keys(perksProperty).forEach(key => filterTag[key] = false);
+let filterResult = {};
+
+// filter btn create
+Array.from(document.getElementsByClassName("rankingSheetFilterBtn")).forEach(btn => {
+   btn.addEventListener("click", (e) => {
+      filterTag[btn.id] = !filterTag[btn.id];
+
+      //refresh filterResult
+      filterResult = {};
+      Object.keys(filterTag).forEach(key => {
+         if (filterTag[key])
+            perksProperty[key].forEach(perk => filterResult[perk] = true);
+      });
+
+      filterRenderFunction();
+   })
+})
+
+function filterRenderFunction() {
+   //refresh filter btn status
+   Object.keys(filterTag).forEach(property => {
+      if (filterTag[property])
+         document.getElementById(property).classList.add("selected");
+      else
+         document.getElementById(property).classList.remove("selected");
+   })
+
+   // check if enter filterMode
+   if (Object.keys(filterTag).filter(property => filterTag[property]).length > 0)
+      document.getElementById("rankingSheetWrapper").classList.add("filterMode");
+   else
+      document.getElementById("rankingSheetWrapper").classList.remove("filterMode");
+
+   // refresh perk class according filterResult
+   Array.from(document.getElementsByClassName("filterPerks")).forEach(perk => {
+      perk.classList.remove("filterPerks");
+   })
+   Object.keys(filterResult).forEach(perk => {
+      document.getElementById(perk).classList.add("filterPerks");
+   })
+
+
+}
 // 在終端使用 live-server 指令以開啟local host
 
 // 7.1.0

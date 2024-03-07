@@ -142,7 +142,7 @@ main {
 #rankingSheetFilter>button {
     text-transform: capitalize;
     letter-spacing: 0.3px;
-    padding: 3px 7px;
+    padding: 4px 10px;
     border: 2px solid var(--border-color);
     border-radius: 5px;
     color: var(--font-color);
@@ -151,7 +151,11 @@ main {
 }
 
 #rankingSheetFilter>button:hover {
-    filter: brightness(1.5);
+    filter: brightness(2);
+}
+
+#rankingSheetFilter>button.selected {
+    filter: brightness(3);
 }
 
 #rankingSheet {
@@ -249,9 +253,9 @@ td:last-child {
     pointer-events: none;
 }
 
-/* .perksBtn:not(.filterPerks)>.perksIcon {
-    filter: opacity(0.3);
-} */
+.filterMode .perksBtn:not(.filterPerks)>.perksIcon {
+    filter: opacity(0.5);
+}
 
 
 
@@ -259,8 +263,6 @@ td:last-child {
 
 #contentWrapper {
     position: fixed;
-    display: none;
-    /* visibility: hidden; */
     z-index: 2;
     background-color: var(--primary-color);
     top: 50px;
@@ -268,10 +270,17 @@ td:last-child {
     width: 95%;
     border: 5px var(--secondary-color) solid;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: none;
+    pointer-events: none;
 }
 
 #contentWrapper.show {
-    display: block;
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: initial;
+    transition: all 0.5s cubic-bezier(0, 0.5, 0, 1);
 }
 
 #content {
@@ -301,8 +310,8 @@ td:last-child {
 #content_closeBtn {
     color: #aaaaaa;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     width: 25px;
     height: 25px;
     font-weight: bold;
