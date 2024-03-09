@@ -144,6 +144,7 @@ main {
     letter-spacing: 0.3px;
     padding: 4px 10px;
     border: 2px solid var(--border-color);
+    margin: 3px;
     border-radius: 5px;
     color: var(--font-color);
     background: transparent;
@@ -151,10 +152,10 @@ main {
 }
 
 #rankingSheetFilter>button:hover {
-    filter: brightness(2);
+    filter:saturate(2);
 }
 
-#rankingSheetFilter>button.selected {
+#rankingSheetFilter>button.filterSelected {
     filter: brightness(3);
 }
 
@@ -221,7 +222,7 @@ td:last-child {
     border-radius: 50%;
 }
 
-.perksBtn.selected {
+.perksBtn.perkSelected {
     outline: 3px solid firebrick;
     outline-offset: -5px;
 }
@@ -254,7 +255,7 @@ td:last-child {
 }
 
 .filterMode .perksBtn:not(.filterPerks)>.perksIcon {
-    filter: opacity(0.5);
+    filter: opacity(0.3);
 }
 
 

@@ -1,8 +1,9 @@
 let perksReview;
 let perksRankingData;
 let perksInfoData;
+let perksProperty;
 
-let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json")];
+let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json"), fetch("perks_property.json")];
 Promise.all(fetchArray)
    .then(responses => Promise.all(responses.map(response => {
       if (response.ok)
@@ -14,48 +15,14 @@ Promise.all(fetchArray)
       perksReview = dataArray[0];
       perksRankingData = dataArray[1];
       perksInfoData = dataArray[2];
+      perksProperty = dataArray[3];
       document.getElementById("navBtn1").classList.add("highLight");
-      renderTierListFunction(perksRankingData, perksInfoData, "survivor");
+      tierListRenderFunction(perksRankingData, perksInfoData, "survivor");
+      filterCreateFunction("survivor");
    })
    .catch(error => console.log(error));
 
-// fetchArray = promise array
-// responses = response array
-// response = response
-// response.json() = promise
-
-
-// old fetch method below (sometime execute render function before fetch first two data)
-
-// fetch("perks_review.json")
-//    .then(res => res.json())
-//    .then(json => perksReview = json)
-//    .catch(error => {
-//       console.log("Perks Review Fetch Error!", error);
-//    })
-
-
-// fetch("perks_ranking.json")
-//    .then(res => res.json())
-//    .then(json => perksRankingData = json)
-//    .catch(error => {
-//       console.log("Perks Ranking Fetch Error!", error);
-//    })
-
-// fetch("perks_info.json")
-//    .then(res => res.json())
-//    .then(json => perksInfoData = json)
-//    .then(json => {
-//       perksInfoData = json;
-//       document.getElementById("navBtn1").classList.add("highLight");
-//       renderTierListFunction(perksRankingData, perksInfoData, "survivor");
-//    })
-//    .catch(error => {
-//       console.log("Perks Info Fetch / Render Error!", error);
-//    });
-
-
-function renderTierListFunction(perksRankingData, perksInfoData, role) {
+function tierListRenderFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
    //change title
    document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating Ver 7.1.0`;
@@ -90,9 +57,9 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
          const contentWrapper = document.getElementById("contentWrapper");
          const contentBackground = document.getElementById("content_background");
          createBtn.addEventListener('click', (e) => {
-            if (document.getElementsByClassName("selected")[0])
-               document.getElementsByClassName("selected")[0].classList.remove("selected");
-            e.target.classList.add("selected");
+            if (document.getElementsByClassName("perkSelected")[0])
+               document.getElementsByClassName("perkSelected")[0].classList.remove("perkSelected");
+            e.target.classList.add("perkSelected");
             contentWrapper.classList.add("show");
             contentBackground.classList.add("show");
             content.innerHTML = `
@@ -134,16 +101,18 @@ function renderTierListFunction(perksRankingData, perksInfoData, role) {
 }
 
 document.getElementById("navBtn1").addEventListener("click", (e) => {
-   renderNavFunction(e);
-   renderTierListFunction(perksRankingData, perksInfoData, "survivor");
+   navRenderFunction(e);
+   tierListRenderFunction(perksRankingData, perksInfoData, "survivor");
+   filterCreateFunction("survivor");
 })
 
 document.getElementById("navBtn2").addEventListener("click", (e) => {
-   renderNavFunction(e);
-   renderTierListFunction(perksRankingData, perksInfoData, "killer");
+   navRenderFunction(e);
+   tierListRenderFunction(perksRankingData, perksInfoData, "killer");
+   filterCreateFunction("killer");
 })
 
-function renderNavFunction(e) {
+function navRenderFunction(e) {
    Array.from(document.getElementsByClassName("navBtn")).forEach((btn) => {
       btn.classList.remove("highLight")
    });
@@ -152,47 +121,53 @@ function renderNavFunction(e) {
    document.getElementById("content_background").classList.remove("show");
 }
 
-document.getElementById("navBtn1").addEventListener("click", (e) => {
-   renderNavFunction(e);
-   renderTierListFunction(perksRankingData, perksInfoData, "survivor");
-})
 
 
+// filter var declear
+const filterTag = {};
+const filterResult = {};
 
-// filter data
-const perksProperty = {
-   "heal": ["Adrenaline", "For the People", "Resilience", "We'll make it", "Renewal", "Botany Knowledge"],
-   "repair": ["Prove Thyself", "Resilience", "Deja Vu"]
+function filterCreateFunction(role) {
+   // var init
+   for (var n in filterTag)
+      delete filterTag[n];
+   for (var n in filterResult)
+      delete filterResult[n];
+   Object.keys(perksProperty[role]).forEach(key => filterTag[key] = false);
+   
+
+   // filter init
+   document.getElementById("rankingSheetWrapper").classList.remove("filterMode");
+   Array.from(document.getElementsByClassName("rankingSheetFilterBtn")).forEach(btn => btn.remove());
+
+   // filter btn create according to perksProperty
+   Object.keys(perksProperty[role]).forEach(key => {
+      const createBtn = document.createElement("button");
+      createBtn.className = "rankingSheetFilterBtn";
+      createBtn.id = key;
+      createBtn.innerText = key;
+      createBtn.addEventListener("click", () => {
+         filterTag[key] = !filterTag[key];
+         //refresh filterResult;
+         for (var n in filterResult)
+            delete filterResult[n];
+         Object.keys(filterTag).forEach(key => {
+            if (filterTag[key])
+               perksProperty[role][key].forEach(perk => filterResult[perk] = true);
+         });
+         filterRenderFunction();
+      })
+      document.getElementById("rankingSheetFilter").appendChild(createBtn);
+   });
 }
-
-// filter var init
-let filterTag = {};
-Object.keys(perksProperty).forEach(key => filterTag[key] = false);
-let filterResult = {};
-
-// filter btn create
-Array.from(document.getElementsByClassName("rankingSheetFilterBtn")).forEach(btn => {
-   btn.addEventListener("click", (e) => {
-      filterTag[btn.id] = !filterTag[btn.id];
-
-      //refresh filterResult
-      filterResult = {};
-      Object.keys(filterTag).forEach(key => {
-         if (filterTag[key])
-            perksProperty[key].forEach(perk => filterResult[perk] = true);
-      });
-
-      filterRenderFunction();
-   })
-})
 
 function filterRenderFunction() {
    //refresh filter btn status
    Object.keys(filterTag).forEach(property => {
       if (filterTag[property])
-         document.getElementById(property).classList.add("selected");
+         document.getElementById(property).classList.add("filterSelected");
       else
-         document.getElementById(property).classList.remove("selected");
+         document.getElementById(property).classList.remove("filterSelected");
    })
 
    // check if enter filterMode
