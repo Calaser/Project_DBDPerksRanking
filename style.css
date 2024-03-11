@@ -3,14 +3,20 @@
     font-family: 'Work Sans', 'Open Sans', sans-serif;
 }
 
+.monospace {
+    font-family: "Noto Sans Mono", monospace !important;
+    font-weight: bold;
+    text-transform: initial;
+}
+
 :root {
     --primary-color: #352631;
     --secondary-color: #523f4e;
     --third-color: #bda3b1;
 
     --h1-color: #a71717;
-    --nav-color: #881a1a;
-    --nav-color-highlight: #c20c1b;
+    --nav-color: #a31f1f;
+    --nav-color-highlight: #d31020;
     --font-color: #d6646a;
 
     --border-color: #6d0f0f;
@@ -39,12 +45,13 @@ h2 {
     text-align: center;
     font-size: 2em;
     padding: 10px 0;
-    margin: 0 0 20px;
+    margin: 0 20px;
 }
 
 p {
     font-size: 1.1em;
     line-height: 1.35em;
+    margin: 0px;
 }
 
 header {
@@ -342,10 +349,6 @@ td:last-child {
         max-width: 900px;
         margin: 0 auto;
     }
-
-    p {
-        margin-left: 5px;
-    }
 }
 
 @media screen and (min-width :1200px) {
@@ -393,9 +396,5 @@ td:last-child {
 
     #content_background.show {
         display: none;
-    }
-
-    p {
-        margin-left: 5px;
     }
 }

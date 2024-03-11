@@ -25,7 +25,7 @@ Promise.all(fetchArray)
 function tierListRenderFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
    //change title
-   document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating Ver 7.1.0`;
+   document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating <p class="monospace">ver 7.1.0</p>`;
 
    //clean tier list
    for (let i = 1; i <= 5; i++) {
