@@ -25,27 +25,9 @@
 
 }
 
-h1 {
-    font-size: 2em;
-}
-
-@media screen and (min-width :576px) {
-    h1 {
-        font-size: 3em;
-    }
-}
-
-@media screen and (min-width :768px) {
-    h1 {
-        font-size: 4em;
-    }
-}
-
 h2 {
     text-align: center;
     font-size: 2em;
-    padding: 10px 0;
-    margin: 0 20px;
 }
 
 p {
@@ -63,6 +45,19 @@ header {
 header h1 {
     text-align: center;
     color: var(--h1-color);
+    font-size: 2em;
+}
+
+@media screen and (min-width :576px) {
+    header h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width :768px) {
+    header h1 {
+        font-size: 4em;
+    }
 }
 
 nav ul {
@@ -137,7 +132,13 @@ main {
 }
 
 #rankingSheetFilter {
-    margin-block: 10px;
+    margin-block: 10px 20px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-color);
+    z-index: 1;
+    border: 5px solid var(--border-color);
 }
 
 #rankingSheetFilterTitle {
@@ -159,7 +160,7 @@ main {
 }
 
 #rankingSheetFilter>button:hover {
-    filter:saturate(2);
+    filter: saturate(2);
 }
 
 #rankingSheetFilter>button.filterSelected {
@@ -193,11 +194,13 @@ main {
 }
 
 #rankingSheet caption h2 {
+    padding: 10px 0;
     margin: auto;
     text-transform: capitalize;
 }
 
 #rankingSheet thead td {
+    padding-block: 5px;
     text-transform: capitalize;
 }
 
@@ -327,9 +330,15 @@ td:last-child {
     user-select: none;
 }
 
+#content h2 {
+    padding: 20px 0 30px;
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+
 #perk_info {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     border-bottom: 3px solid var(--border-color);
     list-style-position: outside;
 }
@@ -369,8 +378,8 @@ td:last-child {
     }
 
     #contentWrapper {
-        position: relative;
-        top: 0;
+        position: sticky;
+        top: 20px;
         left: 0;
         margin-inline: 10px;
         width: 55%;

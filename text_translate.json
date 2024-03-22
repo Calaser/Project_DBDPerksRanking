@@ -1,0 +1,98 @@
+{
+    "header":{
+        "en":["DBD Perks Rating Tier List", "Survivor Perks", "Killer Perks"],
+        "zh-TW":["DBD技能強度表", "倖存者技能", "殺手技能"]
+    },
+    "filter":{
+        "en":["Perks Filter"],
+        "zh-TW":["技能過濾功能"],
+        "tag":{
+            "killer":{
+                "gen control":{
+                    "en":"gen control",
+                    "zh-TW":"控機"
+                },
+                "chase":{
+                    "en":"chase",
+                    "zh-TW":"追逐"
+                },
+                "expose":{
+                    "en":"expose",
+                    "zh-TW":"曝露"
+                },
+                "stealth":{
+                    "en":"stealth",
+                    "zh-TW":"隱匿"
+                },
+                "hex":{
+                    "en":"hex",
+                    "zh-TW":"厄咒"
+                },
+                "information":{
+                    "en":"information",
+                    "zh-TW":"情報"
+                },
+                "scourge hook":{
+                    "en":"Scourge Hook",
+                    "zh-TW":"天災鉤"
+                }
+            },
+            "survivor":{
+                "heal":{
+                    "en":"heal",
+                    "zh-TW":"治療"
+                },
+                "repair":{
+                    "en":"repair",
+                    "zh-TW":"修理"
+                },
+                "information":{
+                    "en":"information",
+                    "zh-TW":"情報"
+                },
+                "stealth":{
+                    "en":"stealth",
+                    "zh-TW":"隱匿"
+                },
+                "exhaustion":{
+                    "en":"exhaustion",
+                    "zh-TW":"疲勞"
+                },
+                "haste":{
+                    "en":"haste",
+                    "zh-TW":"加速"
+                },
+                "endurance":{
+                    "en":"Endurance",
+                    "zh-TW":"堅忍"
+                },
+                "item":{
+                    "en":"item",
+                    "zh-TW":"道具"
+                },
+                "boon":{
+                    "en":"boon",
+                    "zh-TW":"恩賜"
+                }
+            }
+        }
+    },
+    "tierlist":{
+        "en":["Perks Rating", "Rating", "Perks", "5 stars", "4 stars", "3 stars", "2 stars", "1 star"],
+        "zh-TW":["技能強度表", "評價", "技能", "5星", "4星", "3星", "2星", "1星"]
+    },
+    "content":{
+        "en":["Review"],
+        "zh-TW":["評價"]
+    },
+    "var":{
+        "killer":{
+            "en":"killer",
+            "zh-TW":"殺手"
+        },
+        "survivor":{
+            "en":"survivor",
+            "zh-TW":"倖存者"
+        }
+    }
+}

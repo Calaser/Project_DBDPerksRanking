@@ -2,8 +2,9 @@ let perksReview;
 let perksRankingData;
 let perksInfoData;
 let perksProperty;
+let textTranslate;
 
-let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json"), fetch("perks_property.json")];
+let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json"), fetch("perks_property.json"), fetch("text_translate.json")];
 Promise.all(fetchArray)
    .then(responses => Promise.all(responses.map(response => {
       if (response.ok)
@@ -16,17 +17,35 @@ Promise.all(fetchArray)
       perksRankingData = dataArray[1];
       perksInfoData = dataArray[2];
       perksProperty = dataArray[3];
+      textTranslate = dataArray[4];
       document.getElementById("navBtn1").classList.add("highLight");
+      uiTranslateFunction("zh-TW", "header");
       tierListRenderFunction(perksRankingData, perksInfoData, "survivor");
       filterCreateFunction("survivor");
    })
    .catch(error => console.log(error));
 
+
+function uiTranslateFunction(language, mode, role) {
+   let uiIndex = [mode];
+
+   uiIndex.forEach(part => {
+      for (let i = 0; i < document.getElementsByClassName(`${part}UI`).length; i++) {
+         document.getElementsByClassName(`${part}UI`)[i].innerText = textTranslate[`${part}`][language][i];
+      }
+   })
+
+   if (mode === "tierlist") {
+      document.getElementsByClassName(`${mode}UI_d`)[0].innerText = `${textTranslate["var"][role][language]} ${textTranslate[`${mode}`][language][0]}`;
+   }
+   if (mode === "filter") {
+      Array.from(document.getElementsByClassName(`${mode}UI_d`)).forEach(tag =>
+         tag.innerText = `${textTranslate["filter"]["tag"][role][tag.innerText.toLowerCase()][language]}`);
+   }
+}
+
 function tierListRenderFunction(perksRankingData, perksInfoData, role) {
    const keys = Object.keys(perksInfoData);
-   //change title
-   document.getElementsByClassName("rankingTitle")[0].innerHTML = `${role} Perks Rating <p class="monospace">ver 7.1.0</p>`;
-
    //clean tier list
    for (let i = 1; i <= 5; i++) {
       document.getElementById(`star${i}`).innerHTML = "";
@@ -78,7 +97,7 @@ function tierListRenderFunction(perksRankingData, perksInfoData, role) {
             </div>
             
             <div id="perk_review">
-               <h2>Review</h2>
+               <h2 class="contentUI">Review</h2>
                <p>
                   ${perksReview[role][perksInfoData[key].name] || "No comment available."}
                </p>
@@ -95,9 +114,12 @@ function tierListRenderFunction(perksRankingData, perksInfoData, role) {
                contentWrapper.classList.remove("show");
                contentBackground.classList.remove("show");
             })
-         })
+            uiTranslateFunction("zh-TW", "content");
+         }
+         )
       }
    })
+   uiTranslateFunction("zh-TW", "tierlist", role);
 }
 
 document.getElementById("navBtn1").addEventListener("click", (e) => {
@@ -119,6 +141,7 @@ function navRenderFunction(e) {
    e.target.classList.add("highLight");
    document.getElementById("contentWrapper").classList.remove("show");
    document.getElementById("content_background").classList.remove("show");
+
 }
 
 
@@ -134,7 +157,7 @@ function filterCreateFunction(role) {
    for (var n in filterResult)
       delete filterResult[n];
    Object.keys(perksProperty[role]).forEach(key => filterTag[key] = false);
-   
+
 
    // filter init
    document.getElementById("rankingSheetWrapper").classList.remove("filterMode");
@@ -143,7 +166,7 @@ function filterCreateFunction(role) {
    // filter btn create according to perksProperty
    Object.keys(perksProperty[role]).forEach(key => {
       const createBtn = document.createElement("button");
-      createBtn.className = "rankingSheetFilterBtn";
+      createBtn.className = "rankingSheetFilterBtn filterUI_d";
       createBtn.id = key;
       createBtn.innerText = key;
       createBtn.addEventListener("click", () => {
@@ -159,6 +182,7 @@ function filterCreateFunction(role) {
       })
       document.getElementById("rankingSheetFilter").appendChild(createBtn);
    });
+   uiTranslateFunction("zh-TW", "filter", role);
 }
 
 function filterRenderFunction() {
