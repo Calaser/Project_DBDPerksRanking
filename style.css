@@ -455,11 +455,16 @@ td:last-child {
     text-transform: capitalize;
 }
 
-#content_info {
+#content_info,
+#content_default {
     text-align: center;
     padding-bottom: 50px;
     border-bottom: 3px solid var(--border-color);
     list-style-position: outside;
+}
+
+.content_hide {
+    display: none;
 }
 
 #content_info>img {

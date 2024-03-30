@@ -82,8 +82,8 @@
         "zh-TW":["評價", "技能", "5星", "4星", "3星", "2星", "1星"]
     },
     "content":{
-        "en":["Review"],
-        "zh-TW":["評價"]
+        "en":["Perk Description", "Click the perks icon in the table to show detail.", "Review"],
+        "zh-TW":["技能敘述", "點擊左邊的技能圖案以顯示細節", "評價"]
     },
     "var":{
         "killer":{

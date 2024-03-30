@@ -247,6 +247,12 @@ function tierListBtnRenderFunction(e, key) {
    contentBackground.classList.add("show");
 
    // content change
+   // display change
+   if (!document.getElementById("content_default").classList.contains("content_hide")){
+      document.getElementById("content_default").classList.add("content_hide");
+      document.getElementById("content_info").classList.remove("content_hide");
+      document.getElementById("content_review").classList.remove("content_hide");
+   }
    // info part
    const content_info_img = document.getElementById("content_info_img");
    const content_info_title = document.getElementById("content_info_title");
@@ -274,6 +280,21 @@ function contentRenderFunction() {
    const content = document.getElementById("content");
    content.innerHTML = "";
 
+   // content_default DOM build
+   const content_default = document.createElement("div");
+   const content_default_title = document.createElement("h2");
+   const content_default_content = document.createElement("p");
+
+   content_default.id = "content_default";
+   content_default_title.id = "content_default_title";
+   content_default_title.className = "contentUI";
+   content_default_content.id = "content_default_content";
+   content_default_content.className = "contentUI";
+
+   content_default.appendChild(content_default_title);
+   content_default.appendChild(content_default_content);
+   content.appendChild(content_default);
+
    // content_info DOM build
    const content_info = document.createElement("div");
    const content_info_img = document.createElement("img");
@@ -281,11 +302,10 @@ function contentRenderFunction() {
    const content_info_content = document.createElement("p");
 
    content_info.id = "content_info";
+   content_info.className = "content_hide";
    content_info_img.id = "content_info_img";
    content_info_title.id = "content_info_title";
-   content_info_title.innerText = "Perk Description";
    content_info_content.id = "content_info_content";
-   content_info_content.innerText = "Click the perks icon in the table to show detail.";
 
    content_info.appendChild(content_info_img);
    content_info.appendChild(content_info_title);
@@ -297,6 +317,8 @@ function contentRenderFunction() {
    const content_review_title = document.createElement("h2");
    const content_review_content = document.createElement("p");
 
+   content_review.id = "content_review";
+   content_review.className = "content_hide";
    content_review_title.className = "contentUI";
    content_review_content.id = "content_review_content";
 
@@ -320,6 +342,8 @@ function contentRenderFunction() {
       contentWrapper.classList.remove("show");
       contentBackground.classList.remove("show");
    })
+
+   uiTranslateFunction(currentLanguage, "content");
 }
 
 
