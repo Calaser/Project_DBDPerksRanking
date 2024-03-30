@@ -1,7 +1,7 @@
 {
     "header":{
-        "en":["DBD Perks Rating Tier List", "Survivor Perks", "Killer Perks"],
-        "zh-TW":["DBD技能強度表", "倖存者技能", "殺手技能"]
+        "en":["DBD Perks Rating Tier List", "Survivor Perks", "Killer Perks", "Language", "Language"],
+        "zh-TW":["DBD技能強度表", "倖存者技能", "殺手技能", "語言", "語言"]
     },
     "filter":{
         "en":["Perks Filter"],
@@ -78,8 +78,8 @@
         }
     },
     "tierlist":{
-        "en":["Perks Rating", "Rating", "Perks", "5 stars", "4 stars", "3 stars", "2 stars", "1 star"],
-        "zh-TW":["技能強度表", "評價", "技能", "5星", "4星", "3星", "2星", "1星"]
+        "en":["Rating", "Perks", "5 stars", "4 stars", "3 stars", "2 stars", "1 star"],
+        "zh-TW":["評價", "技能", "5星", "4星", "3星", "2星", "1星"]
     },
     "content":{
         "en":["Review"],

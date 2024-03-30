@@ -23,12 +23,10 @@
         <div id="wrapper">
             <h1 class="headerUI">DBD Perks Rating Tier List</h1>
             <nav>
-                <ul>
-                    <li><a href="#" class="navBtn" id="navBtn1"><span class="headerUI">Survivor Perks</span><p class="monospace">ver 7.1.0</p></a>
-                    </li>
-                    <li><a href="#" class="navBtn" id="navBtn2"><span class="headerUI">Killer Perks</span></span><p class="monospace">ver 7.1.0</p></a></li>
+                <ul id="navList">
                 </ul>
             </nav>
+            <button id="navSetting"><span class="headerUI">Language</span></a>
         </div>
     </header>
 
@@ -39,7 +37,8 @@
             </div>
             <table id="rankingSheet">
                 <caption>
-                    <h2 class="rankingTitle tierlistUI_d">Survivor Perks Rating <span class="monospace">ver 7.1.0</span></h2>
+                    <h2 class="rankingTitle tierlistUI_d">Survivor Perks Rating <span class="monospace">ver 7.1.0</span>
+                    </h2>
                 </caption>
                 <thead>
                     <tr>
@@ -84,12 +83,18 @@
 
         <section id="contentWrapper">
             <div id="content">
-                <h2>Perk Description</h2>
-                <p>Click the perks icon in the table to show detail.</p>
             </div>
         </section>
         <div id="content_background"></div>
     </main>
+
+    <div id="settingModal">
+        <div id="settingWindow">
+            <div id="settingWindowCloseBtn">✖</div>
+            <h2 class="headerUI">Language</h2>
+        </div>
+        <div id="settingBackground"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
