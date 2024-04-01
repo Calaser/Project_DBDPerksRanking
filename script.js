@@ -16,6 +16,10 @@ const navList = [
    ["killer", "7.1.0"]
 ];
 
+const localLanguage = JSON.parse(localStorage.getItem("localLanguage"));
+if (localLanguage) {
+   currentLanguage = localLanguage;
+}
 
 
 let fetchArray = [fetch("perks_review.json"), fetch("perks_ranking.json"), fetch("perks_info.json"), fetch("perks_property.json"), fetch("text_translate.json")];
@@ -123,9 +127,12 @@ function settingBtnRenderFunction(targetLanguage) {
    Array.from(document.getElementsByClassName("langSelected")).forEach(langBtn => langBtn.classList.remove("langSelected"))
    document.getElementById(currentLanguage).classList.add("langSelected");
 
-   // change language
    if (targetLanguage) {
+      // change language
       uiTranslateFunction(targetLanguage, "default", role);
+
+      // save language setting
+      localStorage.setItem("localLanguage", JSON.stringify(targetLanguage));
    }
 }
 
@@ -248,7 +255,7 @@ function tierListBtnRenderFunction(e, key) {
 
    // content change
    // display change
-   if (!document.getElementById("content_default").classList.contains("content_hide")){
+   if (!document.getElementById("content_default").classList.contains("content_hide")) {
       document.getElementById("content_default").classList.add("content_hide");
       document.getElementById("content_info").classList.remove("content_hide");
       document.getElementById("content_review").classList.remove("content_hide");
