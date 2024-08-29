@@ -108,7 +108,7 @@ nav a:focus {
     color: var(--nav-color-highlight);
 }
 
-nav a *{
+nav a * {
     pointer-events: none;
 }
 
@@ -120,12 +120,14 @@ nav a .capitalize {
     position: absolute;
     right: 20px;
     top: 10px;
-    padding: 5px 10px;
+    width: 40px;
+    height: 35px;
+    padding: 3px 5px;
     color: var(--nav-color);
     font-weight: bold;
     letter-spacing: 0.2px;
     background-color: transparent;
-    border: none;
+    border: 2px solid var(--border-color);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -506,7 +508,7 @@ td:last-child {
         top: var(--sticky-distance);
         left: 0;
         margin-inline: 10px;
-        width: min(60%,800px);
+        width: min(60%, 800px);
         height: fit-content;
         padding: 20px;
         display: block;
